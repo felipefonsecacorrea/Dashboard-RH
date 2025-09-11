@@ -1,0 +1,9 @@
+= SharePoint.Files("https://enpasa.sharepoint.com/sites/CCINTEGRATIETE", [ApiVersion = 15])
+
+= Table.SelectRows(Fonte, each Text.Contains([Name], "HISTORICO HORAS EXTRAS.xlsx"))
+
+= #"Linhas FiltradasNome"{[Name="HISTORICO HORAS EXTRAS.xlsx",#"Folder Path"="https://enpasa.sharepoint.com/sites/CCINTEGRATIETE/ARQUIVOS/ADMINISTRAÇÃO/03 - RECURSOS HUMANOS/00- B.I DASHBOARD'S - INDICADORES RH/BASE. B.I/"]}[Content]
+
+= Excel.Workbook(#"HISTORICO HORAS EXTRAS xlsx_https://enpasa SharePoint com/sites/CCINTEGRATIETE/ARQUIVOS/ADMINISTRAÇÃO/03 - RECURSOS HUMANOS/00- B I DASHBOARD'S - INDICADORES RH/BASE  B I/")
+
+= #"Pasta de Trabalho Importada do Excel"{[Item="HISTORICO SALÁRIO",Kind="Sheet"]}[Data]
