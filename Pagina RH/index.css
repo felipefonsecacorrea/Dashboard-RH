@@ -23,11 +23,13 @@ body{
     width: 35%;
     height: 50vh;
     box-shadow: #000 5px 5px 25px;
+    justify-content: center;
 }
 
 #logo{
     margin-top: 5%;
     width: 50%;
+    margin-bottom: 3%;
 }
 
 #dashboard{
@@ -41,16 +43,44 @@ body{
 }
 
 #login button{
-    margin-top: 2%;
+    margin-top: 5%;
+    margin-bottom: 5%;
     border: 0.5px solid #7BACA8;
-    border-radius: 3px;
+    border-radius: 5px;
     width: 15%;
     height: 4vh;
     background-color: #11505E;
     color: white;
     font-size: medium;
+    transition: 1s;
 }
+
+#login button:hover{
+    width: 17%;
+    height: 5vh;
+    background-color:#B63E3E;
+    color: white;
+    font-weight: 700;
+    transition: 1s;
+    border-radius: 25%;
+    border: #11505E 1px solid;
+}
+
 
 #login h2{
     color: #11505E;
+    width: 100%;
+}
+
+#senha{
+    text-align:center;
+    border: 0.5px solid #11505E;
+    border-radius: 3px;
+    height: 4vh;
+    width: 43%;
+}
+
+#senha::placeholder{
+    color: #11505E;
+    opacity: 0.3;
 }
