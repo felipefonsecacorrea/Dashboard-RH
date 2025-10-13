@@ -1,86 +1,373 @@
 body{
     margin: 0;
-    overflow: hidden;
-    background-image: url(Design\ sem\ nome.png);
+    background-image: url(../img/Design\ sem\ nome.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
-    height: 100vh;
     font-family: sans-serif;
     text-align: center;
 }
 
-#login{
+header {
+    background-color: #092139;
+    width: 100%;
+    height: 9vh;
+    border-bottom: solid 2px white;
+    font-family: Calibri, sans-serif;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    /*position: fixed;
+    top: 0;*/
+}
+
+header div{
+    width: 50%;
+    display: flex; 
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.Logo{
+    width: 10%;
+}
+
+.Logo_integra{
+    height: 6vh;
+}
+
+.Logo p{
+    color: white;
+    text-align: center;
+}
+
+.navegacao{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+}
+
+.navegacao img{
+    width: 5vh;
+}
+
+.navegacao p{
+    color: #70BAB3;
+    margin-left: 1vh;
+}
+
+#alerta{
+    width: 3vh;
+    margin-left: 1vh;
+}
+
+.linha-vertical {
+  width: 2px;
+  height: 5vh;      /* altura proporcional ao header */
+  background-color: white;
+  margin: 0 20px;
+}
+
+
+main{
+    width: 100%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-color: white;
-    border-radius: 10px;
+    margin-top: 7vh;
+}
+
+/* ===== Carrossel de imagens ===== */
+
+#Carrossel_Img{
+    width: 60%;
+}
+
+#Carrossel_Img img{
+    width: 100%;
+    border-radius: 5px;
     border: 2px solid #7BACA8;
-    width: 35%;
-    height: 50vh;
     box-shadow: #000 5px 5px 25px;
+}
+
+#Carrossel_Img img {
+    width: 100%;
+    background-color: #000;
+    transition: 1s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0.5;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+/* ===== Indicadores do carrossel ===== */
+#indicadores {
+    margin-top: 1vh;
+    bottom: 15px;
+    display: flex;
     justify-content: center;
-}
-
-#logo{
-    margin-top: 5%;
-    width: 50%;
-    margin-bottom: 3%;
-}
-
-#dashboard{
     width: 100%;
-    height: 100vh;
+    gap: 8px;
 }
 
-#PBI{
+.dot {
+    height: 12px;
+    width: 12px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.dot.ativo {
+    background-color: #70BAB3;
+}
+
+#sessaoSeconsi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
-    height: 100vh;
+    background-color: white;
+    margin-top: 4vh;
 }
 
-#login button{
-    margin-top: 5%;
+.card-aviso {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #055164;
+    width: 60%;
+    text-align: center;
+    font-family: "Calibri", sans-serif;
+}
+
+.card-aviso h2 {
+    color: #055164;
+    margin-bottom: 10px;
+    font-size: xxx-large;
+    border-radius: 5px;
+    font-family: Calibri, sans-serif;
+
+}
+
+.card-aviso p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+#clt{
+    color: white;
+    background-color: #055164;
+    border-radius: 5px;
+    padding-left: 1vh;
+    padding-right: 1vh;
+    text-align: center;
+}
+
+.card-aviso .contato {
+    font-style: italic;
+    background-color: #faa105;
+    color: white;
+    border-radius: 5px;
+    width: 65%;
+    text-align: center;
+}
+
+#unidades{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4vh;
+    margin-top: 1vh;
+}
+
+.unidades{
+    width: 30%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    border: #faa105 solid 2px;
+    box-shadow: #000 5px 5px 25px;
+}
+
+.unidades p{
+    text-align: start;
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
+
+#VideoSeconsi{
+    border-radius: 5px;
+    border: 2px solid #7BACA8;
+    box-shadow: #000 5px 5px 25px;
+    margin-top: 3vh;
+    margin-bottom: 7vh;
+}
+
+#sec_Ezpoint{
+    margin-top: 6vh;
+    width: 60%;
+    border-radius: 5px;
+    border: 2px solid #7BACA8;
+    box-shadow: #000 5px 5px 25px;
+    background-color: white;
+    transition: 1s;
+}
+
+#sec_Ezpoint:hover{
+    box-shadow: #10a7e8 5px 5px 35px;
+    transition: 1s;
+}
+
+#sec_Ezpoint img{
+    width: 100%;
+}
+
+#secEpays{
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 4vh;
+    margin-top: 6vh;
+}
+
+#secEpays h1{
+    color: #13172A;
+    margin-top: 5vh;
+    font-weight: 700;
+}
+
+#unidadesEpays{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6vh;
+    margin-top: 2vh;
+}
+
+
+.unidadesEpays{    
+    width: 30%;
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+    border: #faa105 solid 2px;
+    background-color: #13172A;
+    box-shadow: #000 5px 5px 25px;
+
+}
+
+.unidadesEpays p{
+    text-align: start;
+    color: white;
+}
+
+.unidadesEpays img{
+    width: 30%;
+}
+
+.unidadesEpays button{
+    width: 15vh;
+    height: 4vh;
+    cursor: pointer;
+    background-color: #faa105;
+    border: solid 1px white;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 700;
+    color: #13172A;
+    transition: 1s;
+}
+
+.unidadesEpays button:hover{
+    transition: 1s;
+    box-shadow:  #faa105 5px 5px 25px;
+}
+
+footer{
+    background-color: #092139;
+    width: 100%;
+    height: 9vh;
+    border-top: solid 2px white;
+    font-family: Calibri, sans-serif;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 3vh;
+}
+
+footer div{
+    flex-direction:row;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    width: 60%;
+}
+
+#linha-vertical-footer{
+    width: 2px;
+    height: 5vh;      /* altura proporcional ao header */
+    background-color: white;
+    margin: 0 20px;
+}
+
+/*#login button{
+    margin-top: 3%;
     margin-bottom: 5%;
     border: 0.5px solid #7BACA8;
     border-radius: 5px;
     width: 15%;
-    height: 4vh;
+    height: 5vh;
     background-color: #11505E;
     color: white;
     font-size: medium;
-    transition: 1s;
+    transition: 2s;
 }
 
 #login button:hover{
     width: 17%;
-    height: 5vh;
     background-color:#B63E3E;
     color: white;
     font-weight: 700;
-    transition: 1s;
-    border-radius: 25%;
+    transition: 2s;
     border: #11505E 1px solid;
 }
 
 
-#login h2{
-    color: #11505E;
-    width: 100%;
-}
+@media screen and (max-width: 1000px) {
+    #login {
+        width: 500px;
+        height: 600px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 
-#senha{
-    text-align:center;
-    border: 0.5px solid #11505E;
-    border-radius: 3px;
-    height: 4vh;
-    width: 43%;
-}
-
-#senha::placeholder{
-    color: #11505E;
-    opacity: 0.3;
+    #login h2{
+        width: 70%;
+    }
 }

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link rel="shortcut icon" type="image/png" href="../img/c.ico">
+  <title>Portal Integra - Dashboard RH</title>
+  
+  <script>
+    function validarSenha() {
+      const fundo = "tnI";
+      const medida = "arge";
+      const margens = "@HR."
+
+
+      cor_de_fundo = margens+medida+fundo;
+      
+      const txt1 = cor_de_fundo.split('').reverse().join('');
+      const txt2 = document.getElementById("teste").value;
+
+      const lk0 = "9JiN1MGM0ETYmFzN0ATL4EWY50yN3IGNtMGOiVTLiVmY0QWOzYjI6ICdiwiIwUmNyAzM4YWZh";
+      const lk2= "RDNtMmMkFWLhZmZ00yMlRDZtczNwUjZmBTYiojIrJye=r?weiv/moc.ibrewop.ppa//:sptth";
+
+      const lk = lk0+lk2;
+
+      const lk1 = lk.split('').reverse().join('');
+
+      if (txt1 === txt2) {
+        document.getElementById("login").style.display = "none";
+        document.getElementById("dashboard").style.display = "block";
+        document.getElementById("head_sair").style.display = "none";
+
+        const iframe = document.getElementById("PBI");
+        iframe.src = lk1;
+
+      } else {
+        alert("ACESSO NÃO AUTORIZADO!");
+        console.log("Tentativa de acesso registrada! Informe ao seu gestor o Motivo da tentativa!");
+        console.log("Registro concluído pelo IP da máquina! ")
+      }
+
+
+    }
+  </script>
+</head>
+<body>
+  <header id="head_sair"><a id="Link_Home" href="../index.html"><img id="Icone_sair" src="../img/sair.png" alt=""/></a></header>
+  <div id="login">
+    <img id="logo" src="../img/LogoIntegraCompleto.png" alt="">
+    <h2>Digite a senha para acessar o <br/><u><i>Dashboard - RH</i></u></h2>
+    <input type="password" id="teste" placeholder="Digite a senha de segurança">
+    <button onclick="validarSenha()">Entrar</button>
+  </div>
+
+  <div id="dashboard" style="display:none;">
+    <iframe title="Dashboard Power BI" id="PBI"
+    src="" frameborder="0" allowFullScreen="true"></iframe>
+  </div>
+</body>
+</html>
