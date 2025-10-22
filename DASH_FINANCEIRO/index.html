@@ -10,13 +10,15 @@
     function validarSenha() {
       const fundo = "tnI";
 
+      const testeLink = "https://app.powerbi.com/view?r=eyJrIjoiN2E1MzczMDktYTVlOS00ZGUxLWIyZDAtNzc3YjRiNWVlODUzIiwidCI6IjYzOWQ0YmViLTViOGMtNGI3Ny05YWE4LTA0NzFmYTE0MGM1NiJ9"
+      
       const txt2 = document.getElementById("teste").value;
 
-      const lk0 = "9JiN1MGM0ETYmFzN0ATL4EWY50yN3IGNtMGOiVTLiVmY0QWOzYjI6ICdiwiIwUmNyAzM4YWZh";
+      const lk0 = "9JiN1MGM0ETYmFzN0ATL4EWY50yN3IGNtMGOiVTLiVmY0QWOzYjI6ICdiwiIzUDOlVWNiRjY3cz";
 
       const medida = "arge";
 
-      const lk2= "RDNtMmMkFWLhZmZ00yMlRDZtczNwUjZmBTYiojIrJye=r?weiv/moc.ibrewop.ppa//:sptth";
+      const lk2= "NtADZyIWLxUGZ00SOlVTYtkDMzczM1E2NiojIrJye=r?weiv/moc.ibrewop.ppa//:sptth";
 
       const margens = "@HR."
 
@@ -40,6 +42,7 @@
         alert("ACESSO NÃO AUTORIZADO!");
         console.log("Tentativa de acesso registrada! Informe ao seu gestor o Motivo da tentativa!");
         console.log("Registro concluído pelo IP da máquina! ")
+        console.log(testeLink.split('').reverse().join(''))
       }
     }
   </script>
@@ -48,7 +51,8 @@
   <header id="head_sair"><a id="Link_Home" href="../index.html"><img id="Icone_sair" src="../img/sair.png" alt=""/></a></header>
   <div id="login">
     <img id="logo" src="../img/LogoIntegraCompleto.png" alt="">
-    <h2>Digite a senha para acessar o <br/><u><i>Dashboard - RH</i></u></h2>
+    <h2>Digite a senha para acessar o <br/><u><i>Dashboard - Financeiro
+    </i></u></h2>
     <input type="password" id="teste" placeholder="Digite a senha de segurança">
     <button onclick="validarSenha()">Entrar</button>
   </div>
