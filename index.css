@@ -95,7 +95,7 @@ main{
 #Carrossel_Img img{
     width: 100%;
     border-radius: 5px;
-    border: 2px solid #7BACA8;
+    border: 2px solid #FFF; /*#7BACA8;*/
     box-shadow: #000 5px 5px 25px;
 }
 
