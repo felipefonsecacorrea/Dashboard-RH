@@ -225,7 +225,7 @@ main{
 
 #sec_Ezpoint{
     margin-top: 6vh;
-    width: 65%;
+    width: 75%;
     border-radius: 5px;
     border: 2px solid #7BACA8;
     box-shadow: #000 5px 5px 25px;
@@ -260,7 +260,7 @@ main{
 }
 
 #unidadesEpays{
-    width: 65%;
+    width: 75%;
     display: flex;
     align-items: center;
     justify-content: space-between;
