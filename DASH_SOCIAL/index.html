@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link rel="shortcut icon" type="image/png" href="../img/c.ico">
+  <title>Portal Integra - Dashboard RH</title>
+</head>
+<body>
+  <header id="head_sair"><a id="Link_Home" href="../index.html"><img id="Icone_sair" src="../img/sair.png" alt=""/></a></header>
+  <div id="login">
+    <img id="logo" src="../img/LogoIntegraCompleto.png" alt="">
+    <h2>Digite a senha para acessar o <br/><i><u>Dashboard - SOCIAL</i></u></h2>
+    <input type="password" id="teste" placeholder="Digite a senha de segurança">
+    <button onclick="validarSenha()">Entrar</button>
+  </div>
+
+  <div id="dashboard" style="display:none;">
+    <iframe title="Dashboard Power BI" id="PBI"
+    src="" frameborder="0" allowFullScreen="true"></iframe>
+  </div>
+
+  <script src="auth.js" defer></script>
+</body>
+</html>
