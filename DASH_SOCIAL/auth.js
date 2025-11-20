@@ -28,7 +28,6 @@ function validarSenha() {
     iframe.src = lk1;
 
     } else {
-        alert(cor_de_fundo)
     alert("ACESSO NÃO AUTORIZADO!");
     console.log("Tentativa de acesso registrada! Informe ao seu gestor o Motivo da tentativa!");
     console.log("Registro concluído pelo IP da máquina! ")
