@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../Pagina%20RH-backup/index.css"/>
+    <link rel="shortcut icon" type="image/png" href="../Pagina%20RH-backup/img/c.ico">
+  <title>Portal Integra - Geral</title>
+  
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const imagens = [
+      "img/Feliz Natal.jpg",
+      "img/Aniversariantes Dezembro.jpg",
+      "img/Pedagio.jpg",
+      "img/GeladeiraIntegra.jpg",
+      "img/Confraternizacao.jpg",
+      "img/Cronograma.jpg",
+      "img/13Integra.jpg",
+      "img/Convenio.png"
+    ];
+
+    let indexAtual = 0;
+    const imgElemento = document.getElementById("imgCarrossel");
+    const dots = document.querySelectorAll(".dot");
+
+    function atualizarIndicadores() {
+      dots.forEach((dot, i) => {
+        dot.classList.toggle("ativo", i === indexAtual);
+      });
+    }
+
+    function trocarImagem() {
+      indexAtual = (indexAtual + 1) % imagens.length;
+      imgElemento.classList.add("fade-out");
+
+      setTimeout(() => {
+        imgElemento.src = imagens[indexAtual];
+        imgElemento.classList.remove("fade-out");
+        imgElemento.classList.add("fade-in");
+        atualizarIndicadores();
+      }, 500);
+
+      setTimeout(() => imgElemento.classList.remove("fade-in"), 3000);
+    }
+
+    setInterval(trocarImagem, 12000);
+    atualizarIndicadores();
+  });
+</script>
+
+</head>
+<body>
+  <header>
+    <div class="Logo">
+      <img class="Logo_integra" src="../Pagina%20RH-backup/img/LogoIntegraParcial.png" alt="">
+      <p><small>Consórcio Construtor</small><br/>INTEGRA TIETÊ</p>
+    </div>
+
+    <div class="linha-vertical"></div>
+
+    <div>
+      <a href="#" class="navegacao"><img src="../Pagina%20RH-backup/img/hora-mundial%20(2).png" alt=""/> <p>Geral</p> </a>
+      
+      <a href="../Pagina%20RH-backup/DASH_RH/index.html" class="navegacao"><img src="../Pagina%20RH-backup/img/carteira-de-identidade.png" alt=""/> <p>Recursos Humanos</p> </a>
+      
+      <a href="../Pagina%20RH-backup/DASH_FINANCEIRO/index.html" class="navegacao"><img src="../Pagina%20RH-backup/img/contabilidade%20(2).png" alt=""/> <p>Financeiro</p></a>
+    
+      <a href="../Pagina%20RH-backup/DASH_SOCIAL/index.html" class="navegacao"><img src="../Pagina%20RH-backup/img/sociologia.png" alt=""/> <p>Social</p></a>
+    </div>
+
+    <div class="linha-vertical"></div>
+
+    <a href="https://www.linkedin.com/in/cons%C3%B3rcio-construtor-integra-tiet%C3%AA-967500356/?originalSubdomain=br" class="navegacao" target="_blank"><img src="../Pagina%20RH-backup/img/linkedin.png" alt=""/></a>
+
+  </header>
+
+  <main>
+    <div id="Carrossel_Img">
+      <img id="imgCarrossel" src="../Pagina%20RH-backup/img/Feliz%20Natal.jpg" alt="Carrossel"> 
+
+      <div id="indicadores">
+        <span class="dot ativo"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>    
+      </div>  
+    </div>
+
+    <section id="sessaoSeconsi">
+      <div class="card-aviso">
+        <h2>🩺 Novo benefício disponível!</h2>
+        
+        <p>
+          O <strong>Consórcio Integra Tietê</strong> agora oferece 
+          <strong>convênio médico SECONCI-SP</strong> sem desconto para o colaborador. O plano é <strong>100% gratuito para o titular</strong>, e o custo é aplicado 
+          <strong>apenas para dependentes</strong>, sendo <strong>R$39,97</strong> incluindo 
+          filhos abaixo de 20 anos, cônjuges e uniões estáveis comprovadas <small><small>(Adição de dependentes é opcional)</small></small>.
+        </p>
+
+        <p><strong>Especialidades:</strong> Odontologia, Cardiologia, Clínica Geral, Dermatologia, Endocrinologia, Fonoaudiologia, Gastroenterologia, Ginecologia, Mastologia, Neurologia, Nutrição, Oftalmologia, Ortopedia, Otorrinolaringologia, Pediatria, Pequenas Cirurgias, Pneumologia, Proctologia, Psicologia, Psiquiatria, Reumatologia e Urologia</p>
+
+        <p id="clt"><small><small><strong><I>* * *(Contemplação apenas para profissionais CLT)* * *</I></strong></strong></small></small></p>
+
+        <div id="unidades">
+          <div class="unidades">
+              <p><strong>Unidade:</strong> SEDE (Água Branca)</p>
+              <p class="telefone"><strong>Fone:</strong> (11) 3664-5700</p>
+              <p>Av. Francisco Matarazzo, 74 Água Branca - São Paulo</p>
+          </div>
+
+          <div class="unidades">
+              <p><strong>Unidade:</strong> Santo André</p>
+              <p class="telefone"><strong>Fone:</strong> (11) 4757-11120</p>
+              <p>Av. Dom Pedro II, 402 - Jardim, Santo André - SP</p>
+          </div>
+
+          <div class="unidades">
+              <p><strong>Unidade:</strong> MOGI DAS CRUZES</p>
+              <p class="telefone"><strong>Fone:</strong> (11) 4063-4281</p>
+              <p>Av. Francisco Matarazzo, 74 Água Branca - São Paulo</p>
+          </div>
+
+        </div>
+
+        <p class="contato">
+          Em caso de dúvidas, entre em contato com o RH.<br>
+          <small><em>*Benefício concedido conforme diretrizes do SECONCI-SP e acordo coletivo.*</em></small>
+        </p>
+      </div>
+
+    <iframe id="VideoSeconsi" width="60%" height="450" src="https://www.youtube.com/embed/5m3TFGE2OmI?si=tc3BYhNQO2YyEwx4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </section>
+
+    <div id="sec_Ezpoint">
+      <a href="../Pagina%20RH-backup/TUTORIAL%20DE%20CADASTRO.pdf" download="TUTORIAL DE CADASTRO.pdf"><img src="../Pagina%20RH-backup/img/Tutorial.png" alt=""></a>
+    </div>
+    
+    <section id="secEpays">
+      <h1>Tutoriais Epays</h1>
+      <div id="unidadesEpays">
+        <div class="unidadesEpays">
+          <img src="../Pagina%20RH-backup/img/e-branco.png" alt="">
+          <p><strong>Primeiro acesso</strong></p>
+          <a href="../Pagina%20RH-backup/MANUAL%20PRIMEIRO%20ACESSO%20TRABALHADOR%20-%20EPAYS.pdf" download="MANUAL PRIMEIRO ACESSO TRABALHADOR - EPAYS.pdf"><button>Baixar</button></a>
+        </div>
+
+        <div class="unidadesEpays">
+          <img src="../Pagina%20RH-backup/img/e-branco.png" alt="">
+          <p><strong>Gerar senha provisória</strong></p>
+                    <a href="MANUAL PARA GERAR SENHA PROVISÓRIA PARA O TRABALHADOR - EPAYS.pdf" download="MANUAL PARA GERAR SENHA PROVISÓRIA PARA O TRABALHADOR - EPAYS.pdf"><button>Baixar</button></a>
+        </div>
+
+        <div class="unidadesEpays">
+          <img src="../Pagina%20RH-backup/img/e-branco.png" alt="">
+          <p><strong>Ativando o autenticador 2F</strong></p>
+                    <a href="../Pagina%20RH-backup/MANUAL%20PARA%20ATIVAR%20O%20AUTENTICADOR%20DE%202F%20-%20EPAYS.pdf" download="MANUAL PARA ATIVAR O AUTENTICADOR DE 2F - EPAYS.pdf"><button>Baixar</button></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <img class="Logo_integra" src="../Pagina%20RH-backup/img/LogoIntegraParcial.png" alt="">
+
+      <div id="linha-vertical-footer"></div>
+
+      <img class="Logo_integra" src="../Pagina%20RH-backup/img/SBS_BIG.D-f6283581.png" alt="">
+    </div>
+  </footer>
+</body>
+</html>
