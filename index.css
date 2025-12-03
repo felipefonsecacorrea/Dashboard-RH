@@ -199,8 +199,8 @@ main{
 }
 
 .unidades{
-    width: 30%;
-    height: 35vh;
+    width: 29%;
+    height: 45vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -211,8 +211,8 @@ main{
 
 .unidades p{
     text-align: start;
-    margin-left: 1vh;
-    margin-right: 1vh;
+    margin-left: 2vh;
+    margin-right: 2vh;
 }
 
 #VideoSeconsi{
